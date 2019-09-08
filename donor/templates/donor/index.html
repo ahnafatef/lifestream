@@ -1,0 +1,15 @@
+<!-- donor/index.html -->
+
+{% extends 'lifestream/base.html' %}
+
+{% block title %}
+Lifestream | Donor
+{% endblock title %}
+
+
+{% block content %}
+{% if not req %}
+	<p>req not defined!!</p>
+	<a href="{{request.META.HTTP_REFERER}}">Go back</a>
+{% endif %}
+{% endblock content %}

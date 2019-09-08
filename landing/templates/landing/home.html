@@ -1,0 +1,14 @@
+<!-- /landing/home.html -->
+
+{% extends 'lifestream/base.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+	<h1>{{ hello }}</h1>
+	<p>{{ req }}</p>
+	<div class="ui black basic button"><a href='{% url "donor:index" %}'>Black</a></div>
+	<div class="ui yellow basic button"><a href='{% url "search:index" %}'>Yellow</a></div>
+{% endblock content %}
