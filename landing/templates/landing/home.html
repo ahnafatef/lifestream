@@ -3,12 +3,23 @@
 {% extends 'lifestream/base.html' %}
 
 {% block title %}
-Home
+LifeStream | Home
 {% endblock title %}
 
 {% block content %}
-	<h1>{{ hello }}</h1>
-	<p>{{ req }}</p>
-	<div class="ui black basic button"><a href='{% url "donor:index" %}'>Black</a></div>
-	<div class="ui yellow basic button"><a href='{% url "search:index" %}'>Yellow</a></div>
+<section class='section-landing'>
+
+<div class='container container--landing'>
+	<div class='quote u-margin-bottom'>
+		<p class='quote--main'>“The purpose of human life is to serve, and to show compassion and the will to help others.”  – Albert Schweitzer</p>
+	</div>
+	<div class='container'>
+
+		<a href='{% url "donor:index" %}' class='btn u-gutter-horizontal'>Become A Donor</a>
+		<div class='divider divider--small'></div>
+		<a href='{% url "donor:search" %}' class='btn'>Find A Donor</a>
+	</div>
+</div>
+
+</section>
 {% endblock content %}

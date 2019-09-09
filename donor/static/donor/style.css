@@ -1,0 +1,57 @@
+.u-no-top-margin {
+	margin-top: 0 !important;
+}
+
+.register-form {
+	max-width: 50%;
+	margin: 0 auto;
+	padding-bottom: 3rem;
+	border-radius: 5px;
+}
+
+.register-form {
+	padding-top: 3rem;
+	background-color: #dedede;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.register-form *{
+	font-size: 1.6rem;
+}
+
+.register-form form {
+	width: 70%;
+}
+
+.u-center h1{
+	font-size: 2.2rem;
+	display: inline-block;
+	margin-bottom: 2rem;
+}
+
+.u-center {
+	text-align: center
+}
+
+.div-center {
+	position: absolute !important;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, 150%);
+}
+
+.u-relative {
+	position: relative !important;
+}
+
+
+.data-table {
+	max-width: 70%;
+	margin: 0 auto;
+}
+
+.data-table table{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}

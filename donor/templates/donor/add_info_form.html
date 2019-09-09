@@ -1,0 +1,72 @@
+<!-- # donor/add_info_form.html -->
+
+{% extends "lifestream/base.html" %}
+
+{% block title %}LifeStream | Become A Donor{% endblock title %}
+
+{% block content %}
+
+{% if submitted %}
+	<div class="ui middle aligned center aligned grid u-no-top-margin u-relative">
+    	<div class='ui success message div-center'>
+	        <p>Your information has been saved. Thank you.</p>
+        </div>
+	    <a href="{% url 'landing:home' %}" class="a--back">Go back</a>
+	</div>
+
+{% else %}
+
+	<div class="register-form">
+		<div class="ui middle aligned center aligned grid u-no-top-margin">
+			<form action='' method='POST' novalidate="">
+		    <!-- {{ form.non_field_errors }} -->
+		    {% csrf_token %}
+
+			{% if form.non_field_errors %}
+			    <ul>
+			      {% for error in form.non_field_errors %}
+			        <li>{{ error }}</li>
+			      {% endfor %}
+			    </ul>
+			  {% endif %}
+
+			{% for hidden_field in form.hidden_fields %}
+				{% if hidden_field.errors %}
+					<ul>
+					{% for error in hidden_field.errors %}
+						<li>(Hidden field {{ hidden_field.name }}) {{ error }}</li>
+					{% endfor %}
+					</ul>
+				{% endif %}
+				{{ hidden_field }}
+			{% endfor %}
+
+			<div class="u-center">
+				<h1>Register yourself as a Donor</h1>
+			</div>
+
+			<div class="ui form">
+			    {% for field in form.visible_fields %}
+				<div class="field">
+					{% if field.errors %}
+			            {% for error in field.errors %}
+							<div class="ui negative message">
+								<p>{{ error }}</p>
+							</div>
+						{% endfor %}
+					{% endif %}
+					{{ field.label_tag }}
+					{{ field }}
+				</div>
+				{% endfor %}
+				<input type="submit" class='btn' value="submit">
+				<div class="u-center">
+				</div>
+			</div>
+			<a href="{% url 'landing:home' %}" class="a--back">Go back</a>
+			</form>
+		</div>
+	</div>
+
+{% endif %}
+{% endblock content %}

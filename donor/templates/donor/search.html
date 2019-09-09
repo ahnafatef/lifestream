@@ -1,0 +1,37 @@
+<!-- /donor/search.html -->
+
+{% extends 'lifestream/base.html' %}
+
+{% block title %}
+LifeStream | Search
+{% endblock title %}
+
+{% block content %}
+
+	<div class='data-table'>
+		<div class='ui middle aligned center aligned grid u-no-top-margin'>
+			<table class="ui celled table">
+			  <thead>
+			    <tr><th>Name</th>
+			    <th>Blood Group</th>
+			    <th>Age</th>
+			    <th>Gender</th>
+			    <th>Location</th>
+			    <th>Phone</th>
+			  </tr></thead>
+			  <tbody>
+			  	{% for item in data %}
+			    <tr>
+			      <td data-label="Name">{{ item.name }}</td>
+			      <td data-label="Blood Group">{{ item.blood_group }}</td>
+			      <td data-label="Age">{{ item.age }}</td>
+			      <td data-label="Gender">{{ item.gender }}</td>
+			      <td data-label="Location">{{ item.location }}</td>
+			      <td data-label="Phone">{{ item.phone_number }}</td>
+			    </tr>
+			    {% endfor %}
+			  </tbody>
+			</table>
+		</div>
+	</div>
+{% endblock content %}

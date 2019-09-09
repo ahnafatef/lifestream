@@ -4,14 +4,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	{% load static %}
-	<link rel="stylesheet" type="text/css" href="{% static 'landing/style.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'lifestream/style.css' %}">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/table.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,500,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'lifestream/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'landing/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'donor/style.css' %}">
+
 	<title>
 		{% block title %}
 			LifeStream
-		{% endblock title%}
+		{% endblock title %}
 	</title>
 </head>
 <body>

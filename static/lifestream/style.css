@@ -5,3 +5,52 @@
     padding: 0;
     box-sizing: inherit;
 }
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: black;
+    box-sizing: border-box;
+}
+
+
+.btn {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	background-color: #af3a3a;
+	text-decoration: none;
+	font-weight: 500;
+	color: white;
+	padding: 1rem 1rem;
+	display: inline-block;
+	border-radius: 0.5rem;
+	/*box-shadow: 0 5rem 8rem rgba(0,0,0,0.2);*/
+	transition: transform 0.2s;
+	outline: none;
+	color: white;
+	position: relative;
+	text-decoration: none;
+	border: none;
+}
+
+.btn:link {
+	color:white;
+}
+
+.btn:hover {
+	background-color: #c65353;
+}
+
+
+.a--back {
+	display:inline-block;
+	margin-top:2rem;
+}

@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Donor
 
-# Register your models here.
+class DonorAdmin(admin.ModelAdmin):
+	list_display = ('name', 'blood_group', 'gender', 'age', 'location', 'phone_number')
+
+
+admin.site.register(Donor, DonorAdmin)

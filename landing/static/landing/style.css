@@ -1,3 +1,79 @@
-h1 {
-	color: orange;
+.section-landing {
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-image: url('./img/landing-background.jpeg');
+	/*filter: blur(2px) brightness(100%);*/
+	/*backface-visibility: hidden;*/
+	position: relative;
 }
+
+
+.container {
+	display: block;
+}
+
+.container--landing {
+	font-size: 2.8rem;
+	font-weight: 100;
+	/*background-image: linear-gradient();*/
+	width: 60%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -70%);
+	text-align: center;
+}
+
+.quote {
+	width: 70%;
+	display:inline-block;
+	color:white;
+}
+
+.u-margin-bottom {
+	margin-bottom: 3rem;
+}
+
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.row [class^="col-"] {
+    float: left;
+}
+
+.row:not(:last-child) {
+    margin-right: 6rem;
+}
+
+
+.col-1-of-2 {
+	width: calc((100% - 6rem) / 2);
+}
+
+.divider {
+	display:inline;
+}
+
+.divider--small {
+	padding-left: 5rem;
+}
+
+/*.u-gutter-horizontal {
+	margin-right: 5rem;
+}*/
+
+
+
+/*a, a:link, a:hover {
+	color: white;
+}*/
