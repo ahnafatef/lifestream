@@ -11,7 +11,7 @@
     	<div class='ui success message div-center'>
 	        <p>Your information has been saved. Thank you.</p>
         </div>
-	    <a href="{% url 'landing:home' %}" class="a--back">Go back</a>
+	    <a href="{% url 'landing:home' %}" class="a--back">Go home</a>
 	</div>
 
 {% else %}
@@ -60,10 +60,8 @@
 				</div>
 				{% endfor %}
 				<input type="submit" class='btn' value="submit">
-				<div class="u-center">
-				</div>
 			</div>
-			<a href="{% url 'landing:home' %}" class="a--back">Go back</a>
+			<a href="{% url 'landing:home' %}" class="a--back">Go home</a>
 			</form>
 		</div>
 	</div>

@@ -8,30 +8,58 @@ LifeStream | Search
 
 {% block content %}
 
-	<div class='data-table'>
-		<div class='ui middle aligned center aligned grid u-no-top-margin'>
-			<table class="ui celled table">
-			  <thead>
-			    <tr><th>Name</th>
-			    <th>Blood Group</th>
-			    <th>Age</th>
-			    <th>Gender</th>
-			    <th>Location</th>
-			    <th>Phone</th>
-			  </tr></thead>
-			  <tbody>
-			  	{% for item in data %}
-			    <tr>
-			      <td data-label="Name">{{ item.name }}</td>
-			      <td data-label="Blood Group">{{ item.blood_group }}</td>
-			      <td data-label="Age">{{ item.age }}</td>
-			      <td data-label="Gender">{{ item.gender }}</td>
-			      <td data-label="Location">{{ item.location }}</td>
-			      <td data-label="Phone">{{ item.phone_number }}</td>
-			    </tr>
-			    {% endfor %}
-			  </tbody>
-			</table>
+	<div class='container--search'>
+		<div class="ui form">
+			<form action='' method='GET' novalidate="" class='search--form'>
+				<div class="fields">
+					<div class="field">
+						<label>Blood Group</label>
+						<input type="text" name="blood_group" placeholder="Name">
+					</div>
+					<div class="field">
+						<label>Age</label>
+						<input type="number" name="age" placeholder="Name">
+					</div>
+					<div class="field">
+						<label>Gender</label>
+						<input type="text" name="gender" placeholder="Name">
+					</div>
+					<div class="field">
+						<label>Location</label>
+						<input type="text" name="location" placeholder="Name">
+					</div>
+				</div>
+				<input type="submit" class='btn' value="filter">
+			</form>
+		</div>
+
+
+		<div class='data-table'>
+			<div class='ui middle aligned center aligned grid u-no-top-margin'>
+				<table class="ui celled table">
+				  <thead>
+				    <tr><th>Name</th>
+				    <th>Blood Group</th>
+				    <th>Age</th>
+				    <th>Gender</th>
+				    <th>Location</th>
+				    <th>Phone</th>
+				  </tr></thead>
+				  <tbody>
+				  	{% for item in data %}
+				    <tr>
+				      <td data-label="Name">{{ item.name }}</td>
+				      <td data-label="Blood Group">{{ item.blood_group }}</td>
+				      <td data-label="Age">{{ item.age }}</td>
+				      <td data-label="Gender">{{ item.gender }}</td>
+				      <td data-label="Location">{{ item.location }}</td>
+				      <td data-label="Phone">{{ item.phone_number }}</td>
+				    </tr>
+				    {% endfor %}
+				  </tbody>
+				</table>
+			</div>
+			<a href="{% url 'landing:home' %}" class='a--back'>Go home</a>
 		</div>
 	</div>
 {% endblock content %}

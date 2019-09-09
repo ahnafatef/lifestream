@@ -55,3 +55,20 @@
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
+
+.container--search {
+	max-width: 90%;
+	margin: 0 auto;
+	margin-top: 3rem;
+}
+
+.search--form {
+	max-width: 70%;
+	margin:0 auto;
+	margin-bottom: 5rem;
+}
+
+
+.search--form * .field{
+	font-size: 1.4rem;
+}
