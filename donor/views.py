@@ -11,7 +11,7 @@ def index(request):
 
 
 def add_info(request):
-	submitted = False;
+	submitted = False
 	if request.method == 'POST':
 		form = DonorForm(request.POST)
 		if form.is_valid():
@@ -19,7 +19,7 @@ def add_info(request):
 			response = redirect('add-info/?submitted=True')
 			return response
 	else:
-		form = DonorForm();
+		form = DonorForm()
 		if 'submitted' in request.GET:
 			submitted = True
 	context = {'form': form,
@@ -31,24 +31,31 @@ def add_info(request):
 def search(request):
 	data = Donor.objects.all()
 
-	if request.method == 'GET':
-		blood_group = request.GET.get('blood_group')
-		print(blood_group)
-		age = request.GET.get('age')
-		gender = request.GET.get('gender')
-		location = request.GET.get('location')
+	d = [p for p in request.GET.values()]
+	if len(d) != 0:
+		# starting of query string
+		query = 'data.filter('
+		for p in request.GET:
+			if p == 'blood_group' and request.GET.get(p) != '':
 
-		if blood_group != '' and blood_group is not None:
-			data = data.filter(blood_group__icontains=blood_group)
+				# use case insensitive regex to search blood_group
+				# beginning with param
+				query += f"{p}__iregex=r'^{request.GET.get(p)}',"
 
-		elif age != '' and age is not None:
-			data = data.filter(age__icontains=age)
+				# to avoid running the next if block
+				continue
 
-		elif gender != '' and gender is not None:
-			data = data.filter(gender__icontains=gender)
+			if request.GET.get(p) != '':
+				query += f'{p}__icontains="{request.GET.get(p)}",'
 
-		elif location != '' and location is not None:
-			data = data.filter(location__icontains=location)
+		if query[:] == ',':
+			query = f'{query[:-1]}'
+		query = f'{query})'
 
-	context = {'data': data}
+		# get the return value of executing the string
+		data = eval(query)
+
+	context = {'data': data,
+				'request': request.GET
+			}
 	return render(request, 'donor/search.html', context)
