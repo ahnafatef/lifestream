@@ -14,22 +14,23 @@ LifeStream | Search
 				<div class="fields">
 					<div class="field">
 						<label>Blood Group</label>
-						<input type="text" name="blood_group" placeholder="Name">
+						<input type="text" name="blood_group" placeholder="e.g. A+, b+, o-" value="{{ request.blood_group }}">
 					</div>
 					<div class="field">
 						<label>Age</label>
-						<input type="number" name="age" placeholder="Name">
+						<input type="number" name="age" placeholder="e.g. 34, 53" value="{{ request.age }}">
 					</div>
 					<div class="field">
 						<label>Gender</label>
-						<input type="text" name="gender" placeholder="Name">
+						<input type="text" name="gender" placeholder="m or f" value="{{ request.gender }}">
 					</div>
 					<div class="field">
 						<label>Location</label>
-						<input type="text" name="location" placeholder="Name">
+						<input type="text" name="location" placeholder="e.g. dhaka" value="{{ request.location }}">
 					</div>
 				</div>
 				<input type="submit" class='btn' value="filter">
+				<a class='btn u-margin-left-medium' href="{% url 'donor:search' %}">clear filter</a>
 			</form>
 		</div>
 

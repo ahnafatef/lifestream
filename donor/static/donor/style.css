@@ -1,6 +1,4 @@
-.u-no-top-margin {
-	margin-top: 0 !important;
-}
+
 
 .register-form {
 	max-width: 50%;
@@ -30,19 +28,12 @@
 	margin-bottom: 2rem;
 }
 
-.u-center {
-	text-align: center
-}
 
 .div-center {
 	position: absolute !important;
 	top:50%;
 	left:50%;
 	transform: translate(-50%, 150%);
-}
-
-.u-relative {
-	position: relative !important;
 }
 
 

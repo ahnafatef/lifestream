@@ -31,10 +31,6 @@
 	color:white;
 }
 
-.u-margin-bottom {
-	margin-bottom: 3rem;
-}
-
 .row{
     max-width: 114rem;
     margin: 0 auto;
@@ -60,13 +56,6 @@
 	width: calc((100% - 6rem) / 2);
 }
 
-.divider {
-	display:inline;
-}
-
-.divider--small {
-	padding-left: 5rem;
-}
 
 /*.u-gutter-horizontal {
 	margin-right: 5rem;

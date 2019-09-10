@@ -23,6 +23,7 @@ body {
 
 
 .btn {
+	font-family: 'Roboto';
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	background-color: #af3a3a;
@@ -38,6 +39,7 @@ body {
 	color: white;
 	position: relative;
 	text-decoration: none;
+	line-height: 1.15;
 	border: none;
 }
 
@@ -53,4 +55,33 @@ body {
 .a--back {
 	display:inline-block;
 	margin-top:2rem;
+}
+
+.divider {
+	display:inline;
+}
+
+.divider--small {
+	padding-left: 5rem;
+}
+
+
+.u-margin-left-medium {
+	margin-left:1rem;
+}
+
+.u-margin-bottom {
+	margin-bottom: 3rem;
+}
+
+.u-no-top-margin {
+	margin-top: 0 !important;
+}
+
+.u-center {
+	text-align: center
+}
+
+.u-relative {
+	position: relative !important;
 }
